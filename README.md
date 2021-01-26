@@ -1,38 +1,16 @@
-# Unit 13 Homework Assignment - The Power of the Cloud and Unsupervised Learning
+# The Power of the Cloud and Unsupervised Learning
 
 ## Background
 
-It is time to take what you have learned about unsupervised learning and the AWS services and apply it to new situations. For this assignment, you will need to complete **one of two** (not both) challenges. Which challenge you take on is your choice. Just be sure to give it your all -- as the skills you hone will become powerful tools in your FinTech tool belt.
+This report is generated of what cryptocurrencies are available on the trading market and how they can be grouped using classification. I have used unsupervivsed machine learning and Amazon SageMaker by clustering cryptocurrencies and creating plots to present the results. 
 
+The following tasks have been completed:
 
-## Option 2: Clustering Crypto
-
-![Cryptocurrencies coins](Images/cryptocurrencies-coins.jpg)
-_[Cryptocurrencies coins by Worldspectrum](https://www.pexels.com/@worldspectrum?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) | [Free License](https://www.pexels.com/photo-license/)_
-
-### Background
-
-You are a Senior Manager at the Advisory Services team on a [Big Four firm](https://en.wikipedia.org/wiki/Big_Four_accounting_firms). One of your most important clients, a prominent investment bank, is interested in offering a new cryptocurrencies investment portfolio for its customers, however, they are lost in the immense universe of cryptocurrencies. They ask you to help them make sense of it all by generating a report of what cryptocurrencies are available on the trading market and how they can be grouped using classification.  
-
-In this homework assignment, you will put your new unsupervivsed learning and Amazon SageMaker skills into action by clustering cryptocurrencies and creating plots to present your results.
-
-You are asked to accomplish the following main tasks:
-
-* **[Data Preprocessing](#Data-Preprocessing):** Prepare data for dimension reduction with PCA and clustering using K-Means.
-
-* **[Reducing Data Dimensions Using PCA](#Reducing-Data-Dimensions-Using-PCA):** Reduce data dimension using the `PCA` algorithm from `sklearn`.
-
-* **[Clustering Cryptocurrencies Using K-Means](#Clustering-Cryptocurrencies-Using-K-Means):** Predict clusters using the cryptocurrencies data using the `KMeans` algorithm from `sklearn`.
-
-* **[Visualizing Results](#Visualizing-Results):** Create some plots and data tables to present your results.
-
-* **[Challenge](#Optional-Challenge):** Deploy your notebook to Amazon SageMaker.
-
----
-
-### Files
-
-* [crypto_clustering.ipynb](Starter_Files/crypto_clustering.ipynb)
+1. Data Preprocessing: Prepare data for dimension reduction with PCA and clustering using K-Means.
+2. Reducing Data Dimensions Using PCA: Reduce data dimension using the PCA algorithm from sklearn.
+3. Clustering Cryptocurrencies Using K-Means: Predict clusters using the cryptocurrencies data using the KMeans algorithm from sklearn.
+4. Visualizing Results: Create some plots and data tables to present the results.
+5. Challenge: Deploy notebook to Amazon SageMaker.
 
 ---
 
@@ -44,8 +22,7 @@ In this section, you will load the information about cryptocurrencies and perfor
 
 1. Using the provided `CSV` file, create a `Path` object and read the file data directly into a DataFrame named `crypto_df` using `pd.read_csv()`.
 
-2. Using the following `requests` library, retreive the necessary data from the following API endpoint from _CryptoCompare_ - `https://min-api.cryptocompare.com/data/all/coinlist`.  __HINT:__ You will need to use the 'Data' key from the json response, then transpose the DataFrame. Name your DataFrame `crypto_df`.
-
+2. Using the following `requests` library, retreive the necessary data from the following API endpoint from _CryptoCompare_ - `https://min-api.cryptocompare.com/data/all/coinlist`. You will need to use the 'Data' key from the json response, then transpose the DataFrame. Name your DataFrame `crypto_df`.
 
 With the data loaded into a Pandas DataFrame, continue with the following data preprocessing tasks.
 
@@ -146,15 +123,3 @@ Perform the following tasks:
 * [Printing all rows from a DataFrame](https://stackoverflow.com/a/30691921/4325668)
 
 * [Install External Libraries and Kernels in Amazon SageMaker Notebook Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-add-external.html)
-
-### Submission
-
-* Code your solution using the provided starter Jupyter notebook.
-
-* For the _Challenge_ section, create a new Jupyter notebook named `crypto_clustering_sm.ipynb` and include the necessary code to import the additional required library.
-
-* Create and upload a repository with the above files to GitHub and post a link in BootCamp Spot.
-
----
-
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
